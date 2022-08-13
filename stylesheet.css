@@ -1,0 +1,26 @@
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: Montserrat, sans-serif;
+}
+
+.clockFace * {
+    width: 60px;
+    height: 60px;
+}
+
+.r1 .r2 .r3 .r4 .r5 .r6 .r7 .r8 .r9 .r10 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    width: 660px;
+    height: 60px;
+}
+
+.c1 .c2 .c3 .c4 .c5 .c6 .c7 .c8 .c9 .c10 .c11 {
+    color: rgba(255, 255, 255, 1)
+}
