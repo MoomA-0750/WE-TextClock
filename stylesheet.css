@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(26, 26, 26);
     font-size: 48px;
     color: rgba(255, 255, 255, 0.1);
@@ -6,11 +10,10 @@ body {
 }
 
 .clockFace {
-    display: flex;
-    
+    align-self: center;
 }
 
-.r1 .r2 .r3 .r4 .r5 .r6 .r7 .r8 .r9 .r10 {
+.r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9, .r10 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,8 +24,15 @@ body {
     height: 60px;
 }
 
-.c1 .c2 .c3 .c4 .c5 .c6 .c7 .c8 .c9 .c10 .c11 {
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11 {
     /* color: rgba(255, 255, 255, 1); */
     width: 60px;
     height: 60px;
+    text-align: center;
+}
+
+.date {
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 100px;
 }
