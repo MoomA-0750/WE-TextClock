@@ -1,3 +1,4 @@
+// 現在時刻,日付取得
 function currentTime() {
 let now = new Date();
 let hour = ("0" + now.getHours()).slice(-2);
@@ -27,3 +28,27 @@ const text = montheng3 + " " + date;
 document.getElementById("currentDate").innerHTML = text;
 }
 setInterval('currentDate()',1000);
+
+
+// 多分こっからスパゲッティする
+// あの時計ルールがわからん
+
+function lightSwitch() {
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    // let minutes = 0;
+
+    // O'Clock
+    if(minutes == 0) {
+        let elements = document.querySelectorAll(".r10 .c6, .r10 .c7, .r10 .c8, .r10 .c9, .r10 .c10, .r10 .c11");
+        elements[0].className = elements[0].className + " fireUp";
+        elements[1].className = elements[1].className + " fireUp";
+        elements[2].className = elements[2].className + " fireUp";
+        elements[3].className = elements[3].className + " fireUp";
+        elements[4].className = elements[4].className + " fireUp";
+        elements[5].className = elements[5].className + " fireUp";
+        
+    }
+}
+setInterval('lightSwitch()',1000);
