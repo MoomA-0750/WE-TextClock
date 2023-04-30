@@ -39,8 +39,14 @@ function lightSwitch() {
     let minutes = now.getMinutes();
     // let minutes = 0;
 
+
+    // hours
+
+
+
+    // minutes
     // O'Clock
-    if(minutes == 0) {
+    if(5 > minutes >= 0) {
         let elements = document.querySelectorAll(".r10 .c6, .r10 .c7, .r10 .c8, .r10 .c9, .r10 .c10, .r10 .c11");
         elements[0].className = elements[0].className + " fireUp";
         elements[1].className = elements[1].className + " fireUp";
@@ -48,7 +54,39 @@ function lightSwitch() {
         elements[3].className = elements[3].className + " fireUp";
         elements[4].className = elements[4].className + " fireUp";
         elements[5].className = elements[5].className + " fireUp";
-        
+    }
+
+    //Half
+    if(35 > minutes >= 30) {
+        let elements = document.querySelectorAll(".r4 .c1, .r4 .c2, .r4 .c3, .r4 .c4");
+        elements[0].className = elements[0].className + " fireUp";
+        elements[1].className = elements[1].className + " fireUp";
+        elements[2].className = elements[2].className + " fireUp";
+        elements[3].className = elements[3].className + " fireUp";
+    }
+    
+    //Past
+    if(30 > minutes >= 5) {
+        let elements = document.querySelectorAll(".r5 .c1, .r5 .c2, .r5 .c3, .r5 .c4");
+        elements[0].className = elements[0].className + " fireUp";
+        elements[1].className = elements[1].className + " fireUp";
+        elements[2].className = elements[2].className + " fireUp";
+        elements[3].className = elements[3].className + " fireUp";
+    }
+
+    //Five
+    if(10 > minutes >= 5 || minutes >= 55) {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements[0].className = elements[0].className + " fireUp";
+        elements[1].className = elements[1].className + " fireUp";
+        elements[2].className = elements[2].className + " fireUp";
+        elements[3].className = elements[3].className + " fireUp";
+    } else if(10 > minutes >= 5 || minutes >= 55) {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements[0].className = elements[0].className + " fireUp";
+        elements[1].className = elements[1].className + " fireUp";
+        elements[2].className = elements[2].className + " fireUp";
+        elements[3].className = elements[3].className + " fireUp";
     }
 }
 setInterval('lightSwitch()',1000);
