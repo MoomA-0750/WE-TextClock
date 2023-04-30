@@ -46,34 +46,67 @@ function lightSwitch() {
 
     // minutes
     // O'Clock
-    if(5 > minutes && minutes >= 0) {
+    if (5 > minutes && minutes >= 0) {
         let elements = document.querySelectorAll(".r10 .c6, .r10 .c7, .r10 .c8, .r10 .c9, .r10 .c10, .r10 .c11");
         elements.forEach(element => element.className += ' fireUp');
+    } else {
+        let elements = document.querySelectorAll(".r10 .c6, .r10 .c7, .r10 .c8, .r10 .c9, .r10 .c10, .r10 .c11");
+        elements.forEach(element => element.classList.remove('fireUp'));
     }
 
 
     //Half
-    if(35 > minutes && minutes >= 30) {
+    if (35 > minutes && minutes >= 30) {
         let elements = document.querySelectorAll(".r4 .c1, .r4 .c2, .r4 .c3, .r4 .c4");
         // elements.forEach(element => element.className += ' fireUp');
         elements.forEach(element => element.className += ' fireUp');
+    } else {
+        let elements = document.querySelectorAll(".r4 .c1, .r4 .c2, .r4 .c3, .r4 .c4");
+        elements.forEach(element => element.classList.remove('fireUp'));
     }
     
     //Past
-    if(30 > minutes && minutes >= 5) {
+    if (35 > minutes && minutes >= 5) {
         let elements = document.querySelectorAll(".r5 .c1, .r5 .c2, .r5 .c3, .r5 .c4");
-        elements.forEach(element => element.className += ' fireUp');
+        elements.forEach(element => element.classList.add('fireUp'));
+    } else {
+        let elements = document.querySelectorAll(".r5 .c1.fireUp, .r5 .c2.fireUp, .r5 .c3.fireUp, .r5 .c4.fireUp");
+        elements.forEach(element => element.classList.remove('fireUp'));
+    }
+    
+    //to
+    if (60 > minutes && minutes >= 35) {
+        let elements = document.querySelectorAll(".r4 .c10, .r4 .c11");
+        elements.forEach(element => element.classList.add('fireUp'));
+    } else {
+        let elements = document.querySelectorAll(".r4 .c10.fireUp, .r4 .c11.fireUp");
+        elements.forEach(element => element.classList.remove('fireUp'));
+    }
 
+    // Quarter
+
+    //Ten
+    if (15 > minutes && minutes >= 10) {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements.forEach(element => element.className += ' fireUp');
+    } else if (55 > minutes && minutes >= 50) {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements.forEach(element => element.className += ' fireUp');
+    } else {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements.forEach(element => element.classList.remove('fireUp'));
     }
 
     //Five
-    if((10 > minutes && minutes >= 5) || (minutes >= 55)) {
+    if ((10 > minutes && minutes >= 5) || (minutes >= 55)) {
         let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
         elements.forEach(element => element.className += ' fireUp');
-
-    } else if((30 > minutes && minutes >= 25) || (40 > minutes && minutes >= 35)) {
+    } else if ((30 > minutes && minutes >= 25) || (40 > minutes && minutes >= 35)) {
         let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
         elements.forEach(element => element.className += ' fireUp');
+    } else {
+        let elements = document.querySelectorAll(".r3 .c7, .r3 .c8, .r3 .c9, .r3 .c10");
+        elements.forEach(element => element.classList.remove('fireUp'));
     }
 }
 setInterval('lightSwitch()',1000);
