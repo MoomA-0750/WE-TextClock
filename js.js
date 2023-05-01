@@ -1,17 +1,4 @@
-// 現在時刻,日付取得
-function currentTime() {
-let now = new Date();
-let hour = ("0" + now.getHours()).slice(-2);
-let hours = now.getHours();
-let minute = ("0" + now.getMinutes()).slice(-2);
-let minutes = now.getMinutes();
-// let text = hour + ":" + minute;
-// document.getElementById("currentTime").innerHTML = text;
-document.getElementById("hours").innerHTML = hours;
-document.getElementById("minutes").innerHTML = minutes;
-}
-setInterval('currentTime()',1000);
-
+// 現在日付取得
 function currentDate() {
 let now = new Date();
 let month = (now.getMonth() + 1);
@@ -43,9 +30,6 @@ function lightSwitch() {
         hours12 = hours - 12;
     }
     let minutes = now.getMinutes();
-    // let minutes = 0;
-
-    document.getElementById("hours12").innerHTML = hours12;
 
 
     // hours
@@ -57,13 +41,19 @@ function lightSwitch() {
     const hoursDSarray = [".r6 .c1, .r6 .c2, .r6 .c3", ".r7 .c9, .r7 .c10, .r7 .c11", ".r6 .c7, .r6 .c8, .r6 .c9, .r6 .c10, .r6 .c11", ".r7 .c1, .r7 .c2, .r7 .c3, .r7 .c4", ".r7 .c5, .r7 .c6, .r7 .c7, .r7 .c8", ".r6 .c4, .r6 .c5, .r6 .c6", ".r9 .c1, .r9 .c2, .r9 .c3, .r9 .c4, .r9 .c5", ".r10 .c1, .r10 .c2, .r10 .c3, .r10 .c4, .r10 .c5", ".r5 .c8, .r5 .c9, .r5 .c10, .r5 .c11", ".r10 .c1, .r10 .c2, .r10 .c3", ".r8 .c6, .r8 .c7, .r8 .c8, .r8 .c9, .r8 .c10, .r8 .c11", ".r9 .c6, .r9 .c7, .r9 .c8, .r9 .c9, .r9 .c10, .r9 .c11"]
 
     if (35 > minutes) {
-        let elements = document.querySelectorAll(hoursDSarray[hours12-1]);
+        let elements = document.querySelectorAll(hoursDSarray[".r6 .c1, .r6 .c2, .r6 .c3, .r7 .c9, .r7 .c10, .r7 .c11, .r6 .c7, .r6 .c8, .r6 .c9, .r6 .c10, .r6 .c11, .r7 .c1, .r7 .c2, .r7 .c3, .r7 .c4, .r7 .c5, .r7 .c6, .r7 .c7, .r7 .c8, .r6 .c4, .r6 .c5, .r6 .c6, .r9 .c1, .r9 .c2, .r9 .c3, .r9 .c4, .r9 .c5, .r10 .c1, .r10 .c2, .r10 .c3, .r10 .c4, .r10 .c5, .r5 .c8, .r5 .c9, .r5 .c10, .r5 .c11, .r10 .c1, .r10 .c2, .r10 .c3, .r8 .c6, .r8 .c7, .r8 .c8, .r8 .c9, .r8 .c10, .r8 .c11, .r9 .c6, .r9 .c7, .r9 .c8, .r9 .c9, .r9 .c10, .r9 .c11"]);
+        elements.forEach(element => element.classList.remove('fireUp'));
+        elements = document.querySelectorAll(hoursDSarray[hours12-1]);
         elements.forEach(element => element.classList.add('fireUp'));
     } else if (hours12 == 12) {
-        let elements = document.querySelectorAll(hoursDSarray[0]);
+        let elements = document.querySelectorAll(hoursDSarray[".r6 .c1, .r6 .c2, .r6 .c3, .r7 .c9, .r7 .c10, .r7 .c11, .r6 .c7, .r6 .c8, .r6 .c9, .r6 .c10, .r6 .c11, .r7 .c1, .r7 .c2, .r7 .c3, .r7 .c4, .r7 .c5, .r7 .c6, .r7 .c7, .r7 .c8, .r6 .c4, .r6 .c5, .r6 .c6, .r9 .c1, .r9 .c2, .r9 .c3, .r9 .c4, .r9 .c5, .r10 .c1, .r10 .c2, .r10 .c3, .r10 .c4, .r10 .c5, .r5 .c8, .r5 .c9, .r5 .c10, .r5 .c11, .r10 .c1, .r10 .c2, .r10 .c3, .r8 .c6, .r8 .c7, .r8 .c8, .r8 .c9, .r8 .c10, .r8 .c11, .r9 .c6, .r9 .c7, .r9 .c8, .r9 .c9, .r9 .c10, .r9 .c11"]);
+        elements.forEach(element => element.classList.remove('fireUp'));
+        elements = document.querySelectorAll(hoursDSarray[0]);
         elements.forEach(element => element.classList.add('fireUp'));
     } else {
-        let elements = document.querySelectorAll(hoursDSarray[hours12]);
+        let elements = document.querySelectorAll(hoursDSarray[".r6 .c1, .r6 .c2, .r6 .c3, .r7 .c9, .r7 .c10, .r7 .c11, .r6 .c7, .r6 .c8, .r6 .c9, .r6 .c10, .r6 .c11, .r7 .c1, .r7 .c2, .r7 .c3, .r7 .c4, .r7 .c5, .r7 .c6, .r7 .c7, .r7 .c8, .r6 .c4, .r6 .c5, .r6 .c6, .r9 .c1, .r9 .c2, .r9 .c3, .r9 .c4, .r9 .c5, .r10 .c1, .r10 .c2, .r10 .c3, .r10 .c4, .r10 .c5, .r5 .c8, .r5 .c9, .r5 .c10, .r5 .c11, .r10 .c1, .r10 .c2, .r10 .c3, .r8 .c6, .r8 .c7, .r8 .c8, .r8 .c9, .r8 .c10, .r8 .c11, .r9 .c6, .r9 .c7, .r9 .c8, .r9 .c9, .r9 .c10, .r9 .c11"]);
+        elements.forEach(element => element.classList.remove('fireUp'));
+        elements = document.querySelectorAll(hoursDSarray[hours12]);
         elements.forEach(element => element.classList.add('fireUp'));
     }
 
