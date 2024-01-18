@@ -9,7 +9,18 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 104px;
+}
+
 .clockFace {
+    align-self: center;
+}
+
+.date {
     align-self: center;
 }
 
@@ -34,17 +45,16 @@ body {
 .date {
     font-size: 36px;
     color: rgba(255, 255, 255, 0.4);
-    margin-top: 100px;
 }
 
 .fireUp {
-    color: #fff;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-}   
+    color: #fff;
+}
+
 
 /* メモ
-あの時計ルールがわからん */
+あの時計の表記ルールがわからん
 
-/*
 Nine o’clock - 9:00
 Five Past Nine - 9:05
 Ten Past Nine - 9:10
